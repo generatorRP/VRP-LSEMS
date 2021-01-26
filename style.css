@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'BTBrikRegular';
+  src: url('BTBrikRegular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background: linear-gradient(90deg, #1e2751, #765025, #6a0500);
+  background-size: 600% 600%;
+  animation: AnimationName 5s ease infinite;
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.bg-custom {
+  /* background-color: rgba(33, 37, 41, 0.8) !important;  */
+  /* 214, 20, 20  #d61414*/
+  background: linear-gradient(
+    to right,
+    rgba(103, 5, 0, 0.8),
+    rgba(214, 20, 20, 0.1)
+  );
+}
+.overlay {
+  background-image: url('/images/bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+
+canvas {
+  width: 100%;
+}
+.canvas-image {
+  width: 100%;
+  display: none;
+}
+input[type='text'] {
+  background: #dedede;
+  text-transform: uppercase;
+  font-family: BTBrikRegular;
+  text-align: center;
+  letter-spacing: 0.7px;
+  font-size: 1.4rem;
+}
+input[type='text']:focus {
+  background: #dedede;
+}
+.inputs label {
+  color: crimson;
+  text-align: left;
+  font-size: 1.9rem;
+}
+.credits {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+@media (max-width: 768px) {
+  input[type='text'] {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  .inputs label {
+    font-size: 1.4rem;
+  }
+}
