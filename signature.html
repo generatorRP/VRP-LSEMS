@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Santos Emeregency Medical Services</title>
+  <link rel="icon" href="./images/favicon.png" type="image">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="overlay">
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-custom">
+      <div class="container">
+        <span class="navbar-brand mb-0 h1 fw-bold">Los Santos EMS</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link">Header</a>
+            <a class="nav-link" href="./title.html">Title</a>
+            <span class="nav-link active" href="./signature.html">Signature</span>
+
+            <!-- Credits Span -->
+            <span class="nav-link credits">Credits : $tax#6060</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container ">
+      <!-- <section class="d-flex justify-content-around ranks-section"> -->
+      <div class="row justify-content-between mt-3 px-2 ranks">
+        <input type="button" class="btn btn-gradient btn-outline-dark text-truncate btn-active" value="Chief"
+          name='chief' />
+        <input type="button" class="btn btn-gradient btn-outline-dark text-truncate" value="Assitant Chief"
+          name='assistantChief' />
+        <input type="button" class="btn btn-gradient btn-outline-dark text-truncate" value="Deputy Chief"
+          name='deputyChief' />
+        <input type="button" class="btn btn-gradient btn-outline-dark text-truncate" value="Captain" name='captain' />
+        <input type="button" class="btn btn-gradient btn-outline-dark text-truncate" value="Lieutenant"
+          name='lieutenant' />
+        <!-- </div>
+      <div class="row justify-content-between mt-3 px-2 ranks2"> -->
+        <input type="button" class="btn btn-gradient btn-outline-dark text-truncate" value="Supervising Paramedic"
+          name='supervisingParamedic' />
+        <input type="button" class="btn btn-gradient btn-outline-dark text-truncate" value="Paramedic"
+          name='paramedic' />
+        <input type="button" class="btn btn-gradient btn-outline-dark text-truncate" value="Senior EMT"
+          name='seniorEmt' />
+        <input type="button" class="btn btn-gradient btn-outline-dark text-truncate" value="EMT" name='emt' />
+      </div>
+      <!-- </section> -->
+
+      <!-- Canvas -->
+      <div>
+        <canvas class="canvas my-5"></canvas>
+        <img class="canvas-image" src="./images/signature.png" alt="">
+        <img class="logo-image" src="./images/chief.png" alt="">
+      </div>
+
+      <!-- Inputs -->
+      <form class="inputs my-4 form-group d-flex justify-content-center align-content-center flex-column text-sm-left">
+        <div class="row">
+          <div class="col-6 ">
+            <label>Name</label>
+            <input type="text" class="form-control" name='fullname' spellcheck="false">
+          </div>
+          <div class="col-6">
+            <label>Badge Number</label>
+            <input type="text" class="form-control" name='badge' spellcheck="false">
+          </div>
+        </div>
+        <label>Position/Office</label>
+        <input type="text" class="form-control" name='line1' spellcheck="false">
+        <label>Position/Office</label>
+        <input type="text" class="form-control" name="line2" spellcheck="false">
+      </form>
+
+    </div>
+  </div>
+
+
+  <script src="./js/signature.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

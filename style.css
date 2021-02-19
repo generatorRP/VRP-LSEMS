@@ -5,7 +5,7 @@
 }
 @font-face {
   font-family: 'BTBrikRegular';
-  src: url('./BTBrikRegular.otf');
+  src: url('BTBrikRegular.otf');
   font-weight: normal;
   font-style: normal;
 }
@@ -48,7 +48,8 @@ body {
 canvas {
   width: 100%;
 }
-.canvas-image {
+.canvas-image,
+.logo-image {
   width: 100%;
   display: none;
 }
@@ -71,6 +72,19 @@ input[type='text']:focus {
 .credits {
   font-family: 'Source Sans Pro', sans-serif;
 }
+.btn-gradient {
+  background-image: linear-gradient(
+    rgba(213, 31, 38, 0.5),
+    rgba(103, 5, 0, 0.5)
+  );
+  color: #fbf3bb;
+  width: 30%;
+  margin-top: 0.7rem;
+}
+.btn-active {
+  color: white;
+  font-weight: bold;
+}
 
 @media (max-width: 768px) {
   input[type='text'] {
@@ -79,5 +93,9 @@ input[type='text']:focus {
   }
   .inputs label {
     font-size: 1.4rem;
+  }
+  .btn-gradient {
+    width: 30%;
+    margin-top: 0.4rem;
   }
 }
