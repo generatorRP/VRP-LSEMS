@@ -6,7 +6,7 @@ const ranks = document.querySelector('.ranks');
 
 //images preloaded
 let images = {};
-let rank;
+let rank = null;
 ranks.addEventListener('click', (e) => {
   if (e.target.tagName === 'INPUT') {
     // Setting class, image
@@ -20,15 +20,16 @@ ranks.addEventListener('click', (e) => {
 });
 
 const render = () => {
-  // Image(), Rank(), Name(), badge(), Line 1(), line 2()
   // Reset
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.shadowOffsetY = 0;
   // Draw Image
-  let logo = new Image();
-  logo.src = images[rank.name].src;
   ctx.drawImage(image, 0, 0);
-  ctx.drawImage(logo, 465, 105);
+  if (rank !== null) {
+    let logo = new Image();
+    logo.src = images[rank.name].src;
+    ctx.drawImage(logo, 465, 105);
+  }
   // Set text properties
   ctx.shadowOffsetY = 5;
   ctx.shadowOffsetx = 4;
@@ -36,11 +37,7 @@ const render = () => {
   ctx.shadowBlur = 4;
 
   ctx.font = '60px Source Sans Pro';
-  ctx.fillText(
-    `${rank.value} ${inputs.fullname.value}`.toUpperCase().trim(),
-    700,
-    130
-  );
+  ctx.fillText(inputs.fullname.value.toUpperCase().trim(), 700, 130);
   ctx.font = '46px Source Sans Pro';
   ctx.fillText(inputs.badge.value.toUpperCase().trim(), 700, 190);
   ctx.shadowOffsetY = 3;
@@ -65,19 +62,15 @@ inputs.line2.addEventListener('keyup', () => {
 });
 
 onload = () => {
+  inputs.reset();
   loadImages(sources);
 
-  let results = Array.from(ranks.children).filter((e) => {
-    return e.classList.value.includes('btn-active');
-  });
-  rank = results[0];
   // Set canvas properties
   canvas.width = image.naturalWidth;
   canvas.height = image.naturalHeight;
   ctx.drawImage(image, 0, 0);
   ctx.textAlign = 'left';
   ctx.fillStyle = 'white';
-  render();
 };
 
 const loadImages = (sources) => {
